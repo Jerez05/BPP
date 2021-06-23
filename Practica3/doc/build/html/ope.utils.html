@@ -1,0 +1,214 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ope.utils package &#8212; comprobarfichero 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ope package" href="ope.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ope.html" title="ope package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">comprobarfichero 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >ope</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="ope.html" accesskey="U">ope package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ope.utils package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ope-utils-package">
+<h1>ope.utils package<a class="headerlink" href="#ope-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ope.utils.abrirfichero">
+<span id="ope-utils-abrirfichero-module"></span><h2>ope.utils.abrirfichero module<a class="headerlink" href="#module-ope.utils.abrirfichero" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ope.utils.abrirfichero.comprobarFichero">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ope.utils.abrirfichero.</span></span><span class="sig-name descname"><span class="pre">comprobarFichero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ope.utils.abrirfichero.comprobarFichero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tratamientos de los datos.
+Atributos
+—————————————————————-
+file:</p>
+<blockquote>
+<div><p>Este es el nombre del fichero (CSV) que queremos tratar.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Comprovar que el fichero existe, tiene el formato correcto y contiene datos</p>
+<blockquote>
+<div><p>Abrir fichero:</p>
+<blockquote>
+<div><p>Intenta abrir el fichero.
+Si lo puede abrir muestra el mensaje “El fichero se ha abierto sin problemas”.
+En caso contratio mmuestra el mensaje “No se ha encontrado el fichero. Error: (tipo de error)”.</p>
+</div></blockquote>
+<p>Comprobar columnas:</p>
+<blockquote>
+<div><p>Transforma el fiechro CSV en un dataframe y obtiene el numero de columnas.
+Si el numero de columnas es igual a 12 muestra el mensaje “Numero de columnas: 12”.
+Si el numero de columnas no es igual a 12 muestra el mensaje “El fichero debe de tener 12 columnas”.</p>
+</div></blockquote>
+<p>Comprobar contenido:</p>
+<blockquote>
+<div><p>Transforma el fiechro CSV en un dataframe e intenta printar la primea fila.
+Si lo realiza muestra la primera fila de cada columna del dataframe.
+Si no lo realiza muestra el mensaje “El fichero no tiene contenido valido”</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">gastos</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">gastosTratamientoDatos</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res_abrirfichero</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">abrirFichero</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res_comprobarcolumnas</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">comprobarColumnas</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="ope.utils.abrirfichero.comprobarFichero.abrirFichero">
+<span class="sig-name descname"><span class="pre">abrirFichero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ope.utils.abrirfichero.comprobarFichero.abrirFichero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo abrir fichero. Compreuba que el fichero existe.
+Inputs
+——</p>
+<blockquote>
+<div><p>self.file</p>
+</div></blockquote>
+<blockquote>
+<div><p>res_OK: muesta el mensaje “El fichero se ha abierto sin problemas”
+res_NOK: muesta el mensaje “No se ha encontrado el fichero. Error: (error)”</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ope.utils.abrirfichero.comprobarFichero.comprobarColumnas">
+<span class="sig-name descname"><span class="pre">comprobarColumnas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ope.utils.abrirfichero.comprobarFichero.comprobarColumnas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo comrpbar columnas. Comprueba el numero de columnas
+Inputs
+——</p>
+<blockquote>
+<div><p>self.file</p>
+</div></blockquote>
+<blockquote>
+<div><p>res_OK: muestra el mensaje “Numero de columnas: (nº)”
+res_NOK: “El fichero debe de tener 12 columnas”</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ope.utils.abrirfichero.comprobarFichero.comprobarContnido">
+<span class="sig-name descname"><span class="pre">comprobarContnido</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ope.utils.abrirfichero.comprobarFichero.comprobarContnido" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo comrpbar contenido. Comprueba si el fichero tiene contenido.
+Inputs
+——</p>
+<blockquote>
+<div><p>self.file</p>
+</div></blockquote>
+<blockquote>
+<div><p>res_OK: mustra la segunda lista del dataframe
+res_NOK: “El fichero no tiene contenido valido”</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ope.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ope.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ope.utils package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ope.utils.abrirfichero">ope.utils.abrirfichero module</a></li>
+<li><a class="reference internal" href="#module-ope.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ope.html"
+                        title="previous chapter">ope package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ope.utils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ope.html" title="ope package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">comprobarfichero 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >ope</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="ope.html" >ope package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ope.utils package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, David Jerez.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+  </body>
+</html>
